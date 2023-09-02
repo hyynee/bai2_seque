@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "d79e80fd-6cfe-42f7-9996-3c23ea5cb654",
+		"name": "SQUELIZE_APP_FOOD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26245945"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Restaurant User Like",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/get-restaurants-user-like",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"get-restaurants-user-like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant User Rate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/get-restaurants-user-rate",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"get-restaurants-user-rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Like Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"2\",\r\n    \"resId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/like-restaurant",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"like-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Rate Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"18\",\r\n    \"resId\": \"3\",\r\n    \"amount\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/rate-restaurant",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"rate-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"7\",\r\n    \"foodId\": \"3\",\r\n    \"code\": \"SALE 2/9\",\r\n    \"arrSubId\": \"[1,2,3]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user/user-order",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"user-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Get User Like Restaurant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/restaurant/get-users-like-restaurant",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"restaurant",
+								"get-users-like-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Rate Restaurant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resId\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/restaurant/get-users-rate-restaurant",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"restaurant",
+								"get-users-rate-restaurant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:4000/api",
+			"type": "string"
+		}
+	]
+}
